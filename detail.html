@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .car-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .car-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+    }
+
+    .car-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .car-card h2 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .car-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    #car-details {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #car-details img {
+      width: 100%;
+      border-radius: 10px;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: white;
+      background: #007BFF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+
+    .back-button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Available Cars</h1>
+
+  <div class="car-list" id="car-list">
+    <div class="car-card" onclick="showCar('tesla-model-s')">
+      <img src="https://tesla-cdn.thron.com/delivery/public/image/tesla/6f6b1cc7-1b47-4c9c-b0ad-d6892dfdc7f8/bvlatuR/std/2880x1800/Desktop-ModelS" alt="Tesla Model S">
+      <h2>Tesla Model S</h2>
+      <p>Electric performance sedan</p>
+    </div>
+
+    <div class="car-card" onclick="showCar('mustang-gt')">
+      <img src="https://www.ford.com/is/image/Ford/2024-mustang-gt" alt="Ford Mustang GT">
+      <h2>Ford Mustang GT</h2>
+      <p>Iconic muscle car</p>
+    </div>
+
+    <div class="car-card" onclick="showCar('bmw-m3')">
+      <img src="https://www.bmwusa.com/content/dam/bmwusa/M/M3/2024/Overview/BMW-MY24-M3-Overview-01-desktop.jpg" alt="BMW M3">
+      <h2>BMW M3</h2>
+      <p>Luxury sport sedan</p>
+    </div>
+  </div>
+
+  <div id="car-details"></div>
+
+  <script>
+    const carData = {
+      "tesla-model-s": {
+        name: "Tesla Model S",
+        description: "The Tesla Model S is a luxury electric sedan known for its speed, range, and advanced technology. It features Autopilot, a long-range battery, and instant acceleration.",
+        image: "https://tesla-cdn.thron.com/delivery/public/image/tesla/6f6b1cc7-1b47-4c9c-b0ad-d6892dfdc7f8/bvlatuR/std/2880x1800/Desktop-ModelS"
+      },
+      "mustang-gt": {
+        name: "Ford Mustang GT",
+        description: "The Ford Mustang GT is a powerful American muscle car with a 5.0L V8 engine, aggressive styling, and thrilling performance on the road or track.",
+        image: "https://www.ford.com/is/image/Ford/2024-mustang-gt"
+      },
+      "bmw-m3": {
+        name: "BMW M3",
+        description: "The BMW M3 combines luxury, performance, and precision engineering. It features a turbocharged inline-6 engine, advanced suspension, and sleek aerodynamic design.",
+        image: "https://www.bmwusa.com/content/dam/bmwusa/M/M3/2024/Overview/BMW-MY24-M3-Overview-01-desktop.jpg"
+      }
+    };
+
+    function showCar(id) {
+      const car = carData[id];
+      const carList = document.getElementById('car-list');
+      const details = document.getElementById('car-details');
+
+      carList.style.display = 'none';
+      details.style.display = 'block';
+
+      details.innerHTML = `
+        <h1>${car.name}</h1>
+        <img src="${car.image}" alt="${car.name}">
+        <p>${car.description}</p>
+        <a href="#" class="back-button" onclick="goBack(event)">← Back to list</a>
+      `;
+    }
+
+    function goBack(event) {
+      event.preventDefault();
+      document.getElementById('car-details').style.display = 'none';
+      document.getElementById('car-list').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>

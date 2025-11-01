@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars - Filla Motors Ethiopia</title>
+  <link rel="icon" href="images/Logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="images/Logo.png" alt="Filla Motors Logo" class="navbar-logo"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cars.html" aria-current="page">Cars</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <div class="switch-visual">
+          <input type="checkbox" id="dark-mode-toggle">
+          <label for="dark-mode-toggle"></label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="gallery">
+    <h2>Our Models</h2>
+    <p>Explore our exclusive collection — imported luxury and futuristic mobility designed for Ethiopia’s roads.</p>
+
+    <div class="car-grid">
+      <div class="car-card" onclick="openCar('cars/id6.html')">
+        <img src="images/id6.jpg" alt="Volkswagen ID6">
+        <div class="car-info">
+          <h3>Volkswagen ID6 2025</h3>
+          <p>Electric SUV redefining family luxury.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/jetour-dashing.html')">
+        <img src="images/Jetour-Dashing.jpg" alt="Jetour Dashing">
+        <div class="car-info">
+          <h3>Jetour Dashing 2025</h3>
+          <p>Next-gen performance and bold design.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/byd-tang-l.html')">
+        <img src="images/BYD TANGA L.webp" alt="BYD TANG L">
+        <div class="car-info">
+          <h3>BYD TANG L 2025</h3>
+          <p>Electric power, perfected.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/byd-sealion-05.html')">
+        <img src="images/BYD-Sealion-05-EV.webp" alt="BYD Sealion 05">
+        <div class="car-info">
+          <h3>BYD Sealion 05 2025</h3>
+          <p>The legend redefined for the future.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/byd-tang.html')">
+        <img src="images/BYD-tang.webp" alt="BYD Tang">
+        <div class="car-info">
+          <h3>BYD Tang 2025</h3>
+          <p>Technology meets ultimate speed.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/toyota-vxr.html')">
+        <img src="images/Land Cruser.jpg" alt="Toyota VXR">
+        <div class="car-info">
+          <h3>Toyota VXR 2023</h3>
+          <p>Unmatched off-road dominance.</p>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openCar('cars/toyota-bz3x.html')">
+        <img src="images/Toyota Bz3x.webp" alt="Toyota bZ3X">
+        <div class="car-info">
+          <h3>Toyota bZ3X 2025</h3>
+          <p>Electric innovation meets Toyota reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Filla Motors Ethiopia. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

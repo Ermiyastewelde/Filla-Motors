@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filla Motors Ethiopia</title>
+  <link rel="icon" href="images/Logo.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="images/Logo.png" alt="Filla Motors Logo" class="navbar-logo"></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cars.html">Cars</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <div class="switch-visual">
+          <input type="checkbox" id="dark-mode-toggle">
+          <label for="dark-mode-toggle"></label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <video autoplay muted loop class="hero-video" playsinline>
+      <source src="images/Banner-Video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>FILLA MOTORS ETHIOPIA</h1>
+      <p>Luxury redefined. Imported excellence crafted for the future.</p>
+      <button class="cta" onclick="location.href='cars.html'">Explore the Lineup</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Filla Motors. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
