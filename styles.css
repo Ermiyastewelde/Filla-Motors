@@ -263,7 +263,7 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('../images/Filla-Motors-Inside.jpg') center/cover no-repeat;
+  background: url('images/Filla-Motors-Inside.jpg') center/cover no-repeat;
   filter: blur(10px) brightness(0.5);
   z-index: 0;
   border-radius: 20px;
@@ -554,3 +554,4 @@ footer {
   .gallery p { font-size: 1rem; }
 
 }
+
